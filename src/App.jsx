@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Checkout from './pages/Checkout';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import OrderSuccess from './pages/Ordersuccess.jsx';
+import OrderSuccess from './pages/OrderSuccess.jsx';
 
 
 

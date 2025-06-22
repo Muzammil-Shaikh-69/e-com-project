@@ -1,7 +1,7 @@
 // src/pages/OrderSuccess.jsx
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './orderSuccess.css';
+import './ordersuccess.css';
 
 export default function OrderSuccess() {
   const [orderedItems, setOrderedItems] = useState([]);
