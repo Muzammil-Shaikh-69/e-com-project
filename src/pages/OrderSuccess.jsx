@@ -1,4 +1,3 @@
-// src/pages/OrderSuccess.jsx
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ordersuccess.css';
@@ -36,7 +35,7 @@ export default function OrderSuccess() {
       </div>
 
       <Link to="/products" className="continue-shopping-btn">
-        🛍️ Continue Shopping
+        Continue Shopping
       </Link>
     </div>
   );

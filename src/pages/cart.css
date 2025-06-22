@@ -86,7 +86,6 @@
   background-color: #0f2027;
 }
 
-/* 🔒 Disabled (-) Button style when quantity === 1 */
 .quantity-controls button:disabled {
   background-color: #ccc;
   color: #777;
@@ -155,7 +154,6 @@
   cursor: not-allowed;
 }
 
-/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .cart-item {
     flex-direction: center;

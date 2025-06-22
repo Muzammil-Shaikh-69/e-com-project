@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Products from './pages/Products';
@@ -8,12 +8,14 @@ import Checkout from './pages/Checkout';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import OrderSuccess from './pages/OrderSuccess.jsx';
-
-
+import Register from './pages/Register.jsx';
+import Login from './pages/Login.jsx';
+import { AuthProvider } from './context/AuthContext';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
-    <Router>
+    <AuthProvider>
       <ToastContainer
         position="bottom-left"
         autoClose={1500}
@@ -29,14 +31,20 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout />} />
+        <Route
+          path="/checkout"
+          element={
+            <PrivateRoute>
+              <Checkout />
+            </PrivateRoute>
+          }
+        />
         <Route path="/order-success" element={<OrderSuccess />} />
-
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
-      <ToastContainer />
-
-    </Router>
+    </AuthProvider>
   );
 }
 

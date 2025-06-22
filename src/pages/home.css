@@ -112,7 +112,7 @@
 .product-btn:hover {
   background: linear-gradient(45deg, #0f2027, #2c5364);
 }
-/* mobile responsive */
+
 @media (max-width: 600px) {
   .home-title {
     font-size: 28px;

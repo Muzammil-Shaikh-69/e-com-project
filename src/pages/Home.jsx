@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
-import './home.css'; // your home styles
-import './Products.css'; // 👈 Reuse product card CSS
+import './home.css';
+import './Products.css';
 
 export default function Home() {
   const [featured, setFeatured] = useState([]);
@@ -21,8 +21,8 @@ export default function Home() {
       <p className="home-subtitle">Explore our wide range of products!</p>
 
       <div className="extra-buttons">
-        <Link to="/products" className="extra-btn">📦 View All Products</Link>
-        <Link to="/products?deals=true" className="extra-btn">🔥 Best Deals</Link>
+        <Link to="/products" className="extra-btn">View All Products</Link>
+        <Link to="/products?deals=true" className="extra-btn">Best Deals</Link>
       </div>
 
       <h2 className="section-title">Featured Products</h2>

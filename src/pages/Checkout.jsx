@@ -1,4 +1,3 @@
-// src/pages/Checkout.jsx
 import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
@@ -39,8 +38,7 @@ export default function Checkout() {
       toast.error('Please select at least one item to checkout');
       return;
     }
-
-    // ✅ Save order items to localStorage
+    
     localStorage.setItem('orderedItems', JSON.stringify(selectedItems));
 
     toast.success('🎉 Order placed successfully!');

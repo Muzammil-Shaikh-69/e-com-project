@@ -1,30 +1,50 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
+import { useAuth } from '../context/AuthContext';
+import { logoutUser } from '../firebase/auth';
 
-export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  const { user } = useAuth();
+
+  const handleLogout = async () => {
+    try {
+      await logoutUser();
+      setIsOpen(false);
+    } catch (error) {
+      console.error("Logout failed", error);
+    }
+  };
 
   return (
     <nav className="navbar">
-      <div className="navbar-container">
-        <Link to="/" className="logo">🛍️ MyShop</Link>
+      <Link to="/" className="navbar-brand">MyShop</Link>
+      <button className="navbar-toggle" onClick={toggleMenu}>
+        ☰
+      </button>
+      <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
+        <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
+        <Link to="/products" onClick={() => setIsOpen(false)}>Products</Link>
+        <Link to="/cart" onClick={() => setIsOpen(false)}>Cart</Link>
 
-        <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
-          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link to="/products" onClick={() => setMenuOpen(false)}>Products</Link>
-          <Link to="/cart" onClick={() => setMenuOpen(false)}>Cart</Link>
-        </div>
+        {!user && (
+          <>
+            <Link to="/login" onClick={() => setIsOpen(false)}>Login</Link>
+            <Link to="/register" onClick={() => setIsOpen(false)}>Register</Link>
+          </>
+        )}
 
-        <div
-          className={`hamburger ${menuOpen ? 'open' : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        {user && (
+          <button className="logout-btn" onClick={handleLogout}>
+            Logout
+          </button>
+        )}
       </div>
     </nav>
   );
 }
+
+export default Navbar;
