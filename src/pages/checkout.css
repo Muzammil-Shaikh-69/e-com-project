@@ -1,0 +1,69 @@
+.checkout-container {
+  padding: 40px 5%;
+  background-color: #f6f8fa;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.checkout-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1f4037;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.checkout-form {
+  max-width: 550px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #fefefe;
+}
+
+.checkout-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.checkout-form button {
+  background: linear-gradient(45deg, #1f4037, #99f2c8);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.checkout-form button:hover {
+  background: linear-gradient(45deg, #0f2027, #2c5364);
+}
+
+
+@media (max-width: 768px) {
+  .checkout-form {
+    padding: 20px;
+  }
+
+  .checkout-form input,
+  .checkout-form textarea,
+  .checkout-form button {
+    font-size: 14px;
+  }
+}

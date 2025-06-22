@@ -1,0 +1,53 @@
+.footer {
+  background-color: var(--card-bg);
+  padding: 30px 5%;
+  border-top: 1px solid #e0e0e0;
+  font-family: var(--font-main);
+  color: var(--text-secondary);
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+.footer-copy {
+  font-size: 13px;
+  text-align: center;
+  color: #999;
+}
+
+
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+  }
+}

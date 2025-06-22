@@ -1,0 +1,56 @@
+:root {
+  --primary: #1f4037;
+  --accent: #99f2c8;
+  --bg: #f6f8fa;
+  --card-bg: #ffffff;
+  --text-primary: #222;
+  --text-secondary: #555;
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --hover-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  --transition: all 0.3s ease-in-out;
+  --spacing: 15px;
+  --font-main: 'Segoe UI', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
