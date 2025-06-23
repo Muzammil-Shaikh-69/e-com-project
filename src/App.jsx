@@ -12,6 +12,9 @@ import Register from './pages/Register.jsx';
 import Login from './pages/Login.jsx';
 import { AuthProvider } from './context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
+import ProductDetails from './pages/ProductDetails';
+import NotFound from './pages/NotFound';
+
 
 function App() {
   return (
@@ -42,6 +45,8 @@ function App() {
         <Route path="/order-success" element={<OrderSuccess />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </AuthProvider>

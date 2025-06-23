@@ -1,19 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
 import './home.css';
 import './Products.css';
+import Loader from '../components/Loader';
 
 export default function Home() {
   const [featured, setFeatured] = useState([]);
-  const { addToCart } = useCart();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products?limit=4')
       .then(res => res.json())
-      .then(data => setFeatured(data))
-      .catch(err => console.error("Error fetching featured products:", err));
+      .then(data => {
+        setFeatured(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error("Error fetching featured products:", err);
+        setLoading(false);
+      });
   }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <div className="home-container">
@@ -34,9 +44,11 @@ export default function Home() {
               {product.title.length > 40 ? product.title.slice(0, 40) + '...' : product.title}
             </h4>
             <p className="product-price">₹ {product.price}</p>
-            <button className="product-btn" onClick={() => addToCart(product)}>
-              Add to Cart
-            </button>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <Link to={`/product/${product.id}`} className="view-btn">
+                View Product
+              </Link>
+            </div>
           </div>
         ))}
       </div>

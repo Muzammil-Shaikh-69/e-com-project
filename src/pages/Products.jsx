@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useCart } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 import './Products.css';
+import Loader from '../components/Loader';
 
 export default function Products() {
   const [products, setProducts] = useState([]);
-  const { addToCart } = useCart();
 
   useEffect(() => {
     axios.get('https://fakestoreapi.com/products')
@@ -13,9 +13,12 @@ export default function Products() {
       .catch(err => console.error("Error fetching products:", err));
   }, []);
 
+      if (!products.length) return <Loader />;
+  
+
   return (
     <div className="products-container">
-      <h2>🛍️ Products</h2>
+      <h2>Products</h2>
       <div className="products-grid">
         {products.map(product => (
           <div key={product.id} className="product-card">
@@ -24,9 +27,7 @@ export default function Products() {
               {product.title.length > 40 ? product.title.slice(0, 40) + '...' : product.title}
             </h4>
             <p className="product-price">₹ {product.price}</p>
-            <button className="product-btn" onClick={() => addToCart(product)}>
-              Add to Cart
-            </button>
+            <Link to={`/product/${product.id}`} className="view-btn">View Product</Link>
           </div>
         ))}
       </div>
