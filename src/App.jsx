@@ -13,7 +13,6 @@ import Login from './pages/Login.jsx';
 import { AuthProvider } from './context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 import ProductDetails from './pages/ProductDetails';
-import NotFound from './pages/NotFound';
 
 
 function App() {
@@ -46,7 +45,6 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/product/:id" element={<ProductDetails />} />
-        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </AuthProvider>

@@ -1,9 +1,9 @@
 .footer {
-  background-color: var(--card-bg);
+  background-color: #121212;
   padding: 30px 5%;
-  border-top: 1px solid #e0e0e0;
-  font-family: var(--font-main);
-  color: var(--text-secondary);
+  border-top: 1px solid #2a2a2a;
+  font-family: 'Segoe UI', sans-serif;
+  color: #ccc;
   margin-top: 60px;
 }
 
@@ -25,21 +25,20 @@
 
 .footer-links a {
   font-size: 14px;
-  color: var(--text-secondary);
+  color: #aaa;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: var(--primary);
+  color: #ff4d4d;
 }
 
 .footer-copy {
   font-size: 13px;
   text-align: center;
-  color: #999;
+  color: #777;
 }
-
 
 @media (max-width: 600px) {
   .footer-links {

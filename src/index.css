@@ -1,56 +1,52 @@
-:root {
-  --primary: #1f4037;
-  --accent: #99f2c8;
-  --bg: #f6f8fa;
-  --card-bg: #ffffff;
-  --text-primary: #222;
-  --text-secondary: #555;
-  --radius: 12px;
-  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  --hover-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-  --transition: all 0.3s ease-in-out;
-  --spacing: 15px;
-  --font-main: 'Segoe UI', sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: var(--font-main);
-  background-color: var(--bg);
-  color: var(--text-primary);
-  line-height: 1.6;
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #121212;
+  color: #FFFFFF;
 }
 
 a {
+  color: #E50914;
   text-decoration: none;
-  color: inherit;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
+a:hover {
+  text-decoration: underline;
 }
 
-::-webkit-scrollbar-track {
-  background: #e1e1e1;
-  border-radius: 10px;
+h1, h2, h3, h4 {
+  color: #FFFFFF;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--primary);
-  border-radius: 10px;
+button {
+  background-color: #E50914;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #bf0811;
+}
+
+input, select, textarea {
+  background-color: #1E1E1E;
+  border: 1px solid #333333;
+  color: #FFFFFF;
+  padding: 8px;
+  border-radius: 4px;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #1E1E1E;
+  padding: 15px;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }

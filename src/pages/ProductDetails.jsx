@@ -21,14 +21,17 @@ export default function ProductDetails() {
   }
 
   return (
-    <div className="product-detail">
-      <img className="product-img" src={product.image} alt={product.title} />
-      <div className="product-info">
-        <h2>{product.title}</h2>
-        <p className="price">₹ {product.price}</p>
-        <p>{product.description}</p>
-        <button onClick={() => addToCart(product)}>Add to Cart</button>
-      </div>
-    </div>
+   <div className="product-detail">
+  <div className="product-img-box">
+    <img src={product.image} alt={product.title} />
+  </div>
+  <div className="product-info">
+    <h2>{product.title}</h2>
+    <p>{product.description}</p>
+    <div className="price">₹ {product.price}</div>
+    <button onClick={() => addToCart(product)}>Add to Cart</button>
+  </div>
+</div>
+
   );
 }

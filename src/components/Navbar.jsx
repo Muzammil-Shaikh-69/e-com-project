@@ -1,47 +1,32 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './navbar.css';
 import { useAuth } from '../context/AuthContext';
-import { logoutUser } from '../firebase/auth';
+import './navbar.css';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
-
   const { user } = useAuth();
 
-  const handleLogout = async () => {
-    try {
-      await logoutUser();
-      setIsOpen(false);
-    } catch (error) {
-      console.error("Logout failed", error);
-    }
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <nav className="navbar">
-      <Link to="/" className="navbar-brand">MyShop</Link>
-      <button className="navbar-toggle" onClick={toggleMenu}>
-        ☰
-      </button>
-      <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
-        <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
-        <Link to="/products" onClick={() => setIsOpen(false)}>Products</Link>
-        <Link to="/cart" onClick={() => setIsOpen(false)}>Cart</Link>
-
-        {!user && (
-          <>
-            <Link to="/login" onClick={() => setIsOpen(false)}>Login</Link>
-            <Link to="/register" onClick={() => setIsOpen(false)}>Register</Link>
-          </>
-        )}
-
-        {user && (
-          <button className="logout-btn" onClick={handleLogout}>
-            Logout
-          </button>
-        )}
+      <div className="navbar-container">
+        <Link to="/" className="navbar-brand" onClick={closeMenu}>
+          MyShop
+        </Link>
+        <button className="navbar-toggle" onClick={toggleMenu}>
+          ☰
+        </button>
+        <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
+          <Link to="/" onClick={closeMenu}>Home</Link>
+          <Link to="/products" onClick={closeMenu}>Products</Link>
+          <Link to="/cart" onClick={closeMenu}>Cart</Link>
+          {!user && <Link to="/login" onClick={closeMenu}>Login</Link>}
+          {!user && <Link to="/register" onClick={closeMenu}>Register</Link>}
+          {user && <Link to="/logout" onClick={closeMenu}>Logout</Link>}
+        </div>
       </div>
     </nav>
   );
