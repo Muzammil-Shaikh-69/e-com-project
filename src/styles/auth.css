@@ -1,15 +1,15 @@
 .auth-container {
   max-width: 400px;
-  margin: 60px auto;
+  margin: 80px auto;
   padding: 30px;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', sans-serif;
+  text-align: center;
 }
 
 .auth-container h2 {
-  text-align: center;
   margin-bottom: 25px;
   color: #1f4037;
   font-size: 24px;
@@ -18,16 +18,17 @@
 .auth-container input {
   width: 100%;
   padding: 12px;
-  margin-bottom: 18px;
+  margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 15px;
+  box-sizing: border-box;
 }
 
 .auth-container button {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(45deg, #1f4037, #99f2c8);
+  background: linear-gradient(45deg, #3a7bd5, #00d2ff); 
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -35,15 +36,16 @@
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s ease;
+  margin-top: 10px;
 }
 
 .auth-container button:hover {
-  background: linear-gradient(45deg, #0f2027, #2c5364);
+  background: linear-gradient(45deg, #2a5298, #009efd);
 }
 
 .auth-container p {
-  text-align: center;
   font-size: 14px;
+  margin-top: 15px;
 }
 
 .auth-container a {

@@ -15,7 +15,7 @@ export default function OrderSuccess() {
 
   return (
     <div className="order-success-container">
-      <h2>🎉 Order Successful!</h2>
+      <h2>Order Successful!</h2>
       <p>Thank you for your purchase.</p>
 
       <div className="ordered-items">

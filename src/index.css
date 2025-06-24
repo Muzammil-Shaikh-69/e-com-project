@@ -1,40 +1,42 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Roboto, sans-serif;
-  background-color: #121212;
-  color: #FFFFFF;
+  background-color: #f2f2f2;
+  color: #222;
 }
 
 a {
-  color: #E50914;
+  color: #007bff;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #ff6b00;
 }
 
 h1, h2, h3, h4 {
-  color: #FFFFFF;
+  color: #007bff;
 }
 
 button {
-  background-color: #E50914;
+  background-color: #007bff;
   color: white;
   padding: 10px 16px;
   border: none;
   cursor: pointer;
   border-radius: 4px;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background-color: #bf0811;
+  background-color: #ff6b00;
 }
 
 input, select, textarea {
-  background-color: #1E1E1E;
-  border: 1px solid #333333;
-  color: #FFFFFF;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  color: #222;
   padding: 8px;
   border-radius: 4px;
 }
@@ -44,9 +46,10 @@ input, select, textarea {
 }
 
 .card {
-  background-color: #1E1E1E;
+  background-color: #ffffff;
   padding: 15px;
-  border: 1px solid #333333;
+  border: 1px solid #ddd;
   border-radius: 8px;
   margin-bottom: 20px;
+  color: #333;
 }

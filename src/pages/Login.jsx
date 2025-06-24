@@ -3,6 +3,7 @@ import { loginUser } from '../firebase/auth';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
+
 export default function Login() {
   const [form, setForm] = useState({ email: '', password: '' });
   const navigate = useNavigate();

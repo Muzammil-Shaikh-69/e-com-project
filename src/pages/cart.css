@@ -2,21 +2,21 @@
   padding: 40px 5%;
   min-height: 100vh;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
-  color: #f0f0f0;
+  background-color: #fffaf0; 
+  color: #333;
 }
 
 .cart-container h2 {
   font-size: 28px;
   font-weight: bold;
-  color: #ff4d4d;
+  color: #ff6f61; 
   text-align: center;
   margin-bottom: 30px;
 }
 
 .empty-cart {
   text-align: center;
-  color: #aaa;
+  color: #888;
   font-size: 18px;
 }
 
@@ -30,9 +30,9 @@
 .cart-item {
   display: flex;
   align-items: center;
-  background: #1e1e1e;
+  background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(255, 111, 97, 0.15); 
   padding: 15px;
   gap: 20px;
 }
@@ -46,7 +46,7 @@
   width: 90px;
   height: 90px;
   object-fit: contain;
-  background-color: white;
+  background-color: #fbeee0;
   border-radius: 10px;
   padding: 5px;
 }
@@ -57,13 +57,13 @@
 
 .cart-details h4 {
   font-size: 16px;
-  color: #f0f0f0;
+  color: #222;
   margin-bottom: 6px;
 }
 
 .cart-details p {
   font-size: 15px;
-  color: #ff4d4d;
+  color: #ff6f61;
   font-weight: 600;
   margin-bottom: 8px;
 }
@@ -76,7 +76,7 @@
 }
 
 .quantity-controls button {
-  background-color: #333;
+  background-color: #4dabf7; 
   color: white;
   border: none;
   padding: 5px 12px;
@@ -87,18 +87,18 @@
 }
 
 .quantity-controls button:hover {
-  background-color: #ff4d4d;
+  background-color: #1c7ed6; 
 }
 
 .quantity-controls button:disabled {
-  background-color: #555;
-  color: #aaa;
+  background-color: #aaa;
+  color: #666;
   cursor: not-allowed;
   opacity: 0.6;
 }
 
 .remove-btn {
-  background-color: #ff4d4d;
+  background-color: #ff6f61; 
   color: white;
   border: none;
   padding: 6px 12px;
@@ -109,7 +109,7 @@
 }
 
 .remove-btn:hover {
-  background-color: #d63031;
+  background-color: #e4574f;
 }
 
 .cart-summary {
@@ -119,11 +119,11 @@
 .cart-summary h3 {
   font-size: 20px;
   margin-bottom: 15px;
-  color: #ff4d4d;
+  color: #ff6f61;
 }
 
 .clear-btn {
-  background-color: #444;
+  background-color: #4dabf7;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -134,11 +134,11 @@
 }
 
 .clear-btn:hover {
-  background-color: #222;
+  background-color: #1c7ed6;
 }
 
 .checkout-btn {
-  background-color: #ff4d4d;
+  background-color: #ff6f61;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -150,11 +150,11 @@
 }
 
 .checkout-btn:hover {
-  background-color: #c0392b;
+  background-color: #e4574f;
 }
 
 .checkout-btn:disabled {
-  background: #666;
+  background: #bbb;
   cursor: not-allowed;
 }
 

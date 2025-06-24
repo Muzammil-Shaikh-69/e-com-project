@@ -1,8 +1,9 @@
 .products-container {
-  background-color: #1a1a1a;
+  background-color: #fffaf0; 
   padding: 40px 20px;
-  color: #eee;
+  color: #333; 
   min-height: 100vh;
+  text-align: center; 
 }
 
 .products-grid {
@@ -13,7 +14,7 @@
 }
 
 .product-card {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -25,7 +26,7 @@
 
 .product-card:hover {
   transform: scale(1.02);
-  border-color: red;
+  border-color: #ff6f61; 
 }
 
 .product-card img {
@@ -38,12 +39,12 @@
 
 .product-title {
   font-size: 16px;
-  color: #222;
+  color: #333;
   margin: 10px 0;
 }
 
 .product-price {
-  color: #000;
+  color: #222;
   font-size: 18px;
   font-weight: bold;
 }
@@ -53,7 +54,7 @@
   display: inline-block;
   margin-top: 10px;
   padding: 8px 16px;
-  background-color: #000;
+  background-color: #ff6f61; 
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
@@ -65,11 +66,12 @@
 
 .view-btn:hover,
 .product-btn:hover {
-  background-color: red;
+  background-color: #4dabf7; 
 }
 
 .view-btn:active,
 .product-btn:active {
-  background-color: red;
+  background-color: #4dabf7;
   transform: scale(0.97);
 }
+

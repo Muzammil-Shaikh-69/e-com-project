@@ -18,7 +18,7 @@ export default function Cart() {
 
   return (
     <div className="cart-container">
-      <h2>🛒 Your Cart</h2>
+      <h2>Your Cart</h2>
 
       {cartItems.length === 0 ? (
         <p className="empty-cart">Cart is empty</p>
@@ -35,7 +35,9 @@ export default function Cart() {
                 <img src={item.image} alt={item.title} />
                 <div className="cart-details">
                   <h4>{item.title}</h4>
-                  <p>₹ {item.price}</p>
+                  <p>Price: ₹{item.price}</p>
+                  <p>Subtotal: ₹{(item.price * item.quantity).toFixed(2)}</p>
+
                   <div className="quantity-controls">
                     <button
                       onClick={() => updateQuantity(item.id, -1)}
@@ -52,6 +54,7 @@ export default function Cart() {
                       +
                     </button>
                   </div>
+
                   <button
                     className="remove-btn"
                     onClick={() => removeFromCart(item.id)}
@@ -64,7 +67,7 @@ export default function Cart() {
           </div>
 
           <div className="cart-summary">
-            <h3>Total: ₹ {total.toFixed(2)}</h3>
+            <h3>Total (Selected Items): ₹ {total.toFixed(2)}</h3>
             <button className="clear-btn" onClick={clearCart}>
               Clear Cart
             </button>

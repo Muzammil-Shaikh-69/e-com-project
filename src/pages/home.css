@@ -1,6 +1,6 @@
 .home-container {
-  background-color: #1a1a1a;
-  color: #eee;
+  background-color: #fffaf0; 
+  color: #333; 
   min-height: 100vh;
   padding: 40px 20px;
   text-align: center;
@@ -8,13 +8,13 @@
 
 .home-title {
   font-size: 2.5rem;
-  color: red;
+  color: #ff6f61; 
   margin-bottom: 10px;
 }
 
 .home-subtitle {
   font-size: 1.2rem;
-  color: #ccc;
+  color: #fffaf0; 
   margin-bottom: 40px;
 }
 
@@ -27,17 +27,17 @@
 }
 
 .extra-btn {
-  background-color: #222;
-  color: red;
+  background-color: #ffffff;
+  color: #ff6f61;
   padding: 10px 18px;
-  border: 1px solid red;
+  border: 1px solid #ff6f61;
   text-decoration: none;
   border-radius: 5px;
   transition: all 0.3s;
 }
 
 .extra-btn:hover {
-  background-color: red;
+  background-color: #ff6f61;
   color: #fff;
 }
 
@@ -49,4 +49,16 @@
   margin: 20px auto 0;
   max-width: 950px;
   width: 100%;
+}
+
+.hero-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+              url('https://images.unsplash.com/photo-1542291026-7eec264c27ff') no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  transition: background 0.3s ease-in-out;
 }

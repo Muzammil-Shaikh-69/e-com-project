@@ -13,11 +13,13 @@ export default function Products() {
       .catch(err => console.error("Error fetching products:", err));
   }, []);
 
-      if (!products.length) return <Loader />;
-  
+  if (!products.length) return <Loader />;
 
   return (
     <div className="products-container">
+      <div className="products-hero">
+      </div>
+
       <h2>Products</h2>
       <div className="products-grid">
         {products.map(product => (

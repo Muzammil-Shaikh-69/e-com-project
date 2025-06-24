@@ -1,25 +1,72 @@
 .checkout-container {
   padding: 40px 5%;
-  background-color: #f6f8fa;
+  background-color: #fffaf0;
   min-height: 100vh;
   font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  text-align: center; 
 }
 
 .checkout-container h2 {
   font-size: 28px;
   font-weight: bold;
-  color: #1f4037;
-  text-align: center;
+  color: #ff6b00;
   margin-bottom: 30px;
 }
 
+.checkout-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.checkout-summary,
 .checkout-form {
-  max-width: 550px;
-  margin: 0 auto;
-  background: #fff;
+  flex: 1;
+  background-color: #ffffff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  min-width: 280px;
+  max-width: 500px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.checkout-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+
+.checkout-item-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  padding: 5px;
+}
+
+.checkout-item-info {
+  flex: 1;
+}
+
+.checkout-item-title {
+  color: #007bff;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.checkout-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -31,7 +78,10 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 15px;
-  background: #fefefe;
+  background: #f8f8f8;
+  color: #222;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .checkout-form textarea {
@@ -40,7 +90,7 @@
 }
 
 .checkout-form button {
-  background: linear-gradient(45deg, #1f4037, #99f2c8);
+  background-color: #007bff;
   color: white;
   border: none;
   padding: 12px;
@@ -52,13 +102,22 @@
 }
 
 .checkout-form button:hover {
-  background: linear-gradient(45deg, #0f2027, #2c5364);
+  background-color: #ff6b00;
+  color: #fff;
 }
 
 
 @media (max-width: 768px) {
-  .checkout-form {
-    padding: 20px;
+  .checkout-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checkout-form,
+  .checkout-summary {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
   }
 
   .checkout-form input,
