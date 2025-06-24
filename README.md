@@ -1,6 +1,6 @@
 # 🛍️ MyShop – Modern E-Commerce Website
 
-MyShop is a full-featured e-commerce web application built using the **MERN stack** (MongoDB, Express, React, Node.js) with **Firebase Authentication**. The platform supports user registration, secure login, product browsing, cart management, and a complete checkout flow.
+MyShop is a full-featured e-commerce web application built using the **React** with **Firebase Authentication**. The platform supports user registration, secure login, product browsing, cart management, and a complete checkout flow.
 
 ## 🚀 Features
 
@@ -88,10 +88,6 @@ REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
 * Admin dashboard
 * Payment gateway integration (Razorpay, Stripe)
 * Wishlist feature
-
-## 📝 License
-
-This project is licensed under the MIT License.
 
 ---
 
